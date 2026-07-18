@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tic Tac Toe Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Dark Mode -->
+        <button id="themeBtn" class="theme-btn">
+            🌙
+        </button>
+
+        <!-- Title -->
+        <h1>X VS O</h1>
+
+        <!-- Score -->
+        <div class="score-board">
+
+            <div class="card">
+                <h3>Player X</h3>
+                <span id="scoreX">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Draw</h3>
+                <span id="drawScore">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Player O</h3>
+                <span id="scoreO">0</span>
+            </div>
+
+        </div>
+
+        <!-- Status -->
+        <div id="status">
+            Player X Turn
+        </div>
+
+        <!-- Game Board -->
+        <div class="board">
+
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+
+            <!-- Winning Line -->
+            <div id="winLine"></div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+
+            <button id="restartBtn">
+                🔄 Restart
+            </button>
+
+            <button id="resetBtn">
+                ♻ Reset Score
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Winner Popup -->
+    <div id="popup" class="popup hidden">
+
+        <div class="popup-box">
+
+            <div class="emoji">
+                🏆
+            </div>
+
+            <h2 id="winnerText">
+                Player X Wins!
+            </h2>
+
+            <button id="playAgain">
+                Play Again
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Sound -->
+    <audio id="clickSound" src="../sound/click.mp3"></audio>
+    <audio id="winSound" src="../sound/win.mp3"></audio>
+    <audio id="drawSound" src="../sound/draw.mp3"></audio>
+
+    <!-- Confetti -->
+    <canvas id="confetti"></canvas>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
